@@ -1,7 +1,7 @@
 @extends('admin.layouts.base')
 
 @section('content')
-    {{-- <h1>Users</h1>
+    <h1>Users</h1>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -29,5 +29,5 @@
                 </tr>
             @endforeach
         </tbody>
-    </table> --}}
+    </table>
 @endsection
