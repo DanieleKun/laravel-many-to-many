@@ -27,9 +27,9 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware('auth')
-   ->namespace('Admin')
-   ->name('admin.')
-   ->prefix('admin')
+   ->namespace('Admin') //cartella dentro a controllers
+   ->name('admin.') //le rotte iniziano con admin.
+   ->prefix('admin') //prefisso nelle URL /admin/
    ->group(function () {
         Route::get('/', 'AdminController@dashboard')->name('dashboard');
         Route::resource('posts', 'PostController');

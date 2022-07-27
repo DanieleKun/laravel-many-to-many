@@ -2,16 +2,17 @@
 
 namespace App\Models;
 
-use App\Traits\Slugger;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Tag extends Model
 {
-    use Slugger;
-
     public $timestamps = false;
 
+    protected $fillable = [
+        'name'
+    ];
+
     public function posts() {
-        return $this->hasMany('App\Models\Post');
+        return $this->belongsToMany('App\Models\Post');
     }
 }
